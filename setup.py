@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='solarconnect',
-    version='0.0.1',
+    version='0.0.2',
     packages=find_packages(),
     include_package_data=False,
     url='',
@@ -13,7 +13,7 @@ setup(
     install_requires=[
         "google-api-python-client>=1.5.5",
         "maxminddb>=1.3.0",
-        "mysql-connector>=2.2.3",
+        "mysql-connector>=2.0.4-1",
         "oauth2client>=3.0.0",
         "pandas>=0.20.3",
         "PyHive>=0.2.1",
