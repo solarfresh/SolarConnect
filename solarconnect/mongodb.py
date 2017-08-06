@@ -22,7 +22,11 @@ class MongoConnector(object):
         if limit:
             cursor = cursor.limit(limit)
         df = pd.DataFrame([doc for doc in cursor])
-        df["id"] = df["_id"].astype("str")
+        #  There might be an empty result
+        try:
+            df["id"] = df["_id"].astype("str")
+        except:
+            pass
         return df.drop("_id", axis=1)
 
     def insert(self, collection, dataframe):
