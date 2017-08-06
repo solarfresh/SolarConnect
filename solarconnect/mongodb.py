@@ -25,9 +25,10 @@ class MongoConnector(object):
         #  There might be an empty result
         try:
             df["id"] = df["_id"].astype("str")
+            df = df.drop("_id", axis=1)
         except:
             pass
-        return df.drop("_id", axis=1)
+        return df
 
     def insert(self, collection, dataframe):
         """
