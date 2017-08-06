@@ -17,8 +17,10 @@ class MongoConnector(object):
         self.client = client
         self.db = client[db]
 
-    def find(self, collection, query={}, projection=None):
+    def find(self, collection, query={}, projection=None, limit=None):
         cursor = self.db[collection].find(query, projection)
+        if limit:
+            cursor = cursor.limit(limit)
         df = pd.DataFrame([doc for doc in cursor])
         df["id"] = df["_id"].astype("str")
         return df.drop("_id", axis=1)
