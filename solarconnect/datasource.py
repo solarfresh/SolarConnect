@@ -2,7 +2,7 @@ from solarconnect.google.analytic import GoogleAnalytics
 from solarconnect.google.map import GoogleMap
 from solarconnect.maxmind import MaxMind
 from solarconnect.mongodb import MongoConnector
-#from solarconnect.sql import SQLConnector
+from solarconnect.sql import SQLConnector
 from os import path, environ
 
 BASE_DIR = path.dirname(path.abspath(__file__))
