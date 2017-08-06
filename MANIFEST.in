@@ -1,0 +1,1 @@
+recursive-include solarconnect/etc *.p12 *.mmdb
