@@ -2,19 +2,19 @@ from solarconnect.google.analytic import GoogleAnalytics
 from solarconnect.google.map import GoogleMap
 from solarconnect.maxmind import MaxMind
 from solarconnect.mongodb import MongoConnector
-from solarconnect.sql import SQLConnector
+#from solarconnect.sql import SQLConnector
 from os import path, environ
 
 BASE_DIR = path.dirname(path.abspath(__file__))
 
 schema_demo_mysql = SQLConnector('mysql',
-                           user='demo',
-                           passwd='demo',
-                           host='localhost',
-                           port='3306',
-                           db='demo')
+                          user='demo',
+                          passwd='demo',
+                          host='10.0.2.15',
+                          port='3306',
+                          db='demo')
 
-schema_demo_mongo = MongoConnector(host='localhost', port=27017, db='demo')
+schema_demo_mongo = MongoConnector(host='10.0.2.15', port=27017, db='demo')
 
 geo_lite = {
     "city_path": BASE_DIR + "/etc/geo_lite/GeoLite2-City.mmdb",
