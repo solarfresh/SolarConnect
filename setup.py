@@ -13,8 +13,7 @@ setup(
     install_requires=[
         "google-api-python-client>=1.5.5",
         "maxminddb>=1.3.0",
-        # should be installed from OS
-        #"mysql-connector>=2.0.4",
+        "mysql-connector== 2.1.6",
         "oauth2client>=3.0.0",
         "pandas>=0.20.3",
         "PyHive>=0.2.1",
